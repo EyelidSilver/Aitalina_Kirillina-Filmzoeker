@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmzoeker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="/fontawesome/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <script defer src="database.js"></script>
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <a class="header__logo" href="index.html">
+                <h2><span>F</span>FILMEO</h2>
+                <h4 title="Discover Films">Discover Films</h4>
+                <p>Always fresh Discover Films</p>
+            </a>
+            <div class="header__wrap-search">
+                <div class="header__search">
+                    <input id="searchbar" type="text" class="header__search-bar" placeholder="Search...">
+                    <button id="searchBtn" onclick="searchedFilms()" type="submit" class="header__search-button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <nav class="navigation">
+            <form onclick="handleOnChangeEvent(event)" id="radio-buttons" class="navigation__form">
+                <label id="x-men" name="button" class="navigation__form__radio-btn">
+                    <input class="navigation__form__input-nav" value="x-men" type="radio" name="radio-button" checked>
+                    <span class="navigation__form__style"></span>
+                    <span class="navigation__form__text">X-Men</span>
+                </label>
+                <label id="princess" name="button" class="navigation__form__radio-btn">
+                    <input class="navigation__form__input-nav" value="princess" type="radio" name="radio-button"
+                        checked>
+                    <span class="navigation__form__style"></span>
+                    <span class="navigation__form__text">Princess</span>
+                </label>
+                <label id="batman" name="button" class="navigation__form__radio-btn">
+                    <input class="navigation__form__input-nav" value="batman" type="radio" name="radio-button" checked>
+                    <span class="navigation__form__style"></span>
+                    <span class="navigation__form__text">Batman</span>
+                </label>
+                <label id="avengers" name="button" class="navigation__form__radio-btn">
+                    <input class="navigation__form__input-nav" value="avengers" type="radio" name="radio-button"
+                        checked>
+                    <span class="navigation__form__style"></span>
+                    <span class="navigation__form__text">Avengers</span>
+                </label>
+                <label id="nieuwste-films" name="button" class="navigation__form__radio-btn">
+                    <input class="navigation__form__input-nav" value="nieuwste-films" type="radio" name="radio-button"
+                        checked>
+                    <span class="navigation__form__style"></span>
+                    <span class="navigation__form__text">New Films</span>
+                </label>
+                <label id="all-films" name="button" class="navigation__form__radio-btn">
+                    <input class="navigation__form__input-nav" value="all-films" type="radio" name="radio-button"
+                        checked>
+                    <span class="navigation__form__style"></span>
+                    <span class="navigation__form__text">All films</span>
+                </label>
+            </form>
+        </nav>
+        <main class="main">
+            <ul id="films-list" class="main__list">
+            </ul>
+        </main>
+        <footer class="footer">
+            <div class="footer__wrap">
+                <a class="footer__a" href="https://www.linkedin.com/in/aitalinakirillinadesignillustration/"
+                    target="_blank">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <div class="footer__logo">
+                    <h2><span>F</span>FILMEO</h2>
+                    <h4>Discover Films</h4>
+                </div>
+                <p class="footer__author">
+                    Coded by <a href="https://www.instagram.com/eyelid_silver/" target="_blank">Aitalina Kirillina</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
